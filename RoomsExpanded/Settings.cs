@@ -92,6 +92,9 @@ namespace RoomsExpanded
             HospitalUpdate = new PlainRoomSettings(true, 96);
             PrivateBedroom = new PlainRoomSettings(true, 32);
 
+            // added by Alakad
+            Fishery = new PlainRoomSettings(true, 128);
+
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;
             ResizeMaxRoomSize120 = 120;
@@ -130,6 +133,10 @@ namespace RoomsExpanded
         [JsonProperty]
         [Option("Agricultural", category: "New Room - Agricultural")]
         public PlainRoomSettings Agricultural { get; set; }
+        
+        [JsonProperty]
+        [Option("Fishery", category: "New Room - Fishery")]
+        public PlainRoomSettings Fishery { get; set; }
 
         [JsonProperty]
         [Option("Gym", category: "New Room - Gym")]

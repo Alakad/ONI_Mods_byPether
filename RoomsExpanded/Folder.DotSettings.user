@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/home/scott/ONI Mods/ONI_Mods_byPether/packages/Newtonsoft.Json.13.0.1/lib/net45/Newtonsoft.Json.dll" /&gt;
+  &lt;Assembly Path="/home/scott/ONI Mods/ONI_Mods_byPether/RoomsExpanded/packages/PLib.4.7.0/lib/net471/PLib.dll" /&gt;
+  &lt;Assembly Path="/home/scott/ONI Mods/ONIMods/Mods/ButcherStation/ButcherStation.dll" /&gt;
+  &lt;Assembly Path="/home/scott/ONI Mods/ONI_Mods_byPether/RoomsExpanded/packages/Newtonsoft.Json.7.0.1/lib/net45/Newtonsoft.Json.dll" /&gt;
+  &lt;Assembly Path="/home/scott/ONI Mods/ONI_Mods_byPether/lib/0Harmony.dll" /&gt;
+  &lt;Assembly Path="/home/scott/.steam/steam/steamapps/common/OxygenNotIncluded/OxygenNotIncluded_Data/Managed/Assembly-CSharp.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

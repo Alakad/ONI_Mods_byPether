@@ -32,6 +32,13 @@ namespace RoomsExpanded
                     public static LocString EFFECT = (LocString)" - Enables Farm and Grooming Stations";
                     public static LocString TOOLTIP = (LocString)"Area, where all critters and plants can happily live together in harmony.";
                 }
+                
+                public class FISHERY
+                {
+                    public static LocString NAME = (LocString)"Fishery Room";
+                    public static LocString EFFECT = (LocString)" - Enables Fishing Station";
+                    public static LocString TOOLTIP = (LocString)"Area where fish critters can be farmed for meat.";
+                }
 
                 public class KITCHEN
                 {
@@ -110,6 +117,13 @@ namespace RoomsExpanded
                 {
                     public static LocString NAME = (LocString)"Grooming or Farm Station";
                     public static LocString DESCRIPTION = (LocString)"Requires a single Grooming Station or Farm Station";
+                }
+                
+                // added by Alakad
+                public class FISHINGSTATION
+                {
+                    public static LocString NAME = (LocString)"Fishing Station";
+                    public static LocString DESCRIPTION = (LocString)"Requires a single Fishing Station";
                 }
 
                 public class COOKING

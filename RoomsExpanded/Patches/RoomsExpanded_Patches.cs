@@ -77,6 +77,9 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
                 RoomsExpanded_Patches_PrivateRoom.AddRoom(ref __instance);
+                
+                // added by Alakad
+                RoomsExpanded_Patches_Fishery.AddRoom(ref __instance);
 
                 // Temporary "Room Size" mod functionality restored for DLC
                 // Must be removed once "Room Size" is updated for DLC

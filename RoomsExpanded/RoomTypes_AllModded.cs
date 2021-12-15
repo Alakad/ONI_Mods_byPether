@@ -87,6 +87,18 @@ namespace RoomsExpanded
                 return prv_Aquarium;
             }
         }
+        
+        // added by Alakad
+        private static RoomType prv_Fishery = null;
+        public static RoomType Fishery
+        {
+            get
+            {
+                if (prv_Fishery == null)
+                    prv_Fishery = new RoomTypeFisheryData().GetRoomType();
+                return prv_Fishery;
+            }
+        }
 
         private static RoomType prv_Botanical = null;
         public static RoomType Botanical

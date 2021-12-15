@@ -17,6 +17,11 @@ namespace RoomsExpanded
         public static Tag AquariumFeederTag = nameof(AquariumFeederTag).ToString().ToTag();
         public static Tag AquariumReleaseTag = nameof(AquariumReleaseTag).ToString().ToTag();
         public static Tag ItemPedestalTag = nameof(ItemPedestalTag).ToString().ToTag();
+        
+        // added by Alakad
+        public static Tag FisheryFeederTag = nameof(FisheryFeederTag).ToString().ToTag();
+        public static Tag FisheryReleaseTag = nameof(FisheryReleaseTag).ToString().ToTag();
+        public static Tag FishingStationTag = nameof(FishingStationTag).ToString().ToTag();
 
         public static RoomConstraints.Constraint GetMaxSizeConstraint(int maxSize)
         {

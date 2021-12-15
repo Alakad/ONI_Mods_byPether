@@ -57,6 +57,9 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\lib\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
+    <Reference Include="ButcherStation, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\ONIMods\Mods\ButcherStation\ButcherStation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Build.Framework, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Build.Framework.15.9.20\lib\net46\Microsoft.Build.Framework.dll</HintPath>
     </Reference>
@@ -67,12 +70,12 @@
       <HintPath>..\packages\Microsoft.VisualStudio.Setup.Configuration.Interop.1.16.30\lib\net35\Microsoft.VisualStudio.Setup.Configuration.Interop.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PLib, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PLib.4.2.0\lib\net471\PLib.dll</HintPath>
+    <Reference Include="PLib, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>packages\PLib.4.7.0\lib\net471\PLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -105,10 +108,11 @@
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="EffectScripts\MuseumEffectTrigger.cs" />
     <Compile Include="ModInfo.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Fishery.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_PrivateRoom.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomConstraintTags.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Kitchen.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Bathroom.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Laboratory.cs" />
@@ -122,6 +126,7 @@
     <Compile Include="Patches\RoomsExpanded_Patches_Industrial.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Botanical.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Museum.cs" />
+    <Compile Include="RoomTypes\RoomTypeFisheryData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumData.cs" />
     <Compile Include="RoomTypes\RoomTypeBotanicalData.cs" />
     <Compile Include="RoomTypes\RoomTypeAquariumData.cs" />
@@ -144,14 +149,16 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="preview.png" />
+    <Content Include="Translations\de.po" />
+    <Content Include="Translations\roomsexpanded_template.pot" />
+    <Content Include="Translations\ru.po" />
+    <Content Include="Translations\vi.po" />
+    <Content Include="Translations\zh.po" />
+    <Content Include="Translations\zh_klei.po" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>IF exist "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" ( echo Mod Dir exists ) ELSE  ( mkdir "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" &amp;&amp; echo Mod Dir created)
-
-"$(ILMergeConsolePath)" /ndebug /out:"$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName).dll" "$(SolutionDir)$(TargetName)\bin\Release\PLib.dll"  /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319
-
-xcopy /Y /R  /I /Q  /E "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)"</PostBuildEvent>
-  </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
